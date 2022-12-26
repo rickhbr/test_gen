@@ -1,16 +1,23 @@
-# teste_gen
+# Teste da Gen
 
-A new Flutter project.
+Essa é uma aplicação para o teste técnico da Gen, onde foi utilizando um json como mock para trazer as informações do aplicativo. A aplicação foi focada mais na estruturação da arquitetura do projeto, onde foi priorizada a parte técnica, utilizando boas práticas, SOLID, otimização do dispositivo móvel, inicializadores, GetX como gerenciador de estado e alguns packages para facilitar a implementação de Launcher Icons e Splash Screen.
 
-## Getting Started
+## Iniciando o Aplicativo
 
-This project is a starting point for a Flutter application.
+Para rodar a aplicação será necessário fazer um clone do repositório e executar o comando Flutter pub get para baixar as denpendências.
 
-A few resources to get you started if this is your first Flutter project:
+# Solução apresentada
+## GetX
+O GetX foi escolhido por ser mais fácil para gerenciar alguns estados mais simples, onde envolve passagem de argumentos e controle do controlador das telas.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Arquitetura
+Foi escolhido o GetX_pattern por questão de experiência e afinidade com esse tipo de arquitetura, tornou-se bem prático manipular os dados e controlá-los com ele.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Lógica da aplicação
+Para as consultas do Json, foi utilizado o File local, e para a manipulação do json foi realizado um decode para transformá-lo em um Map<String, dynamic> e depois foi feito um fromJson para ler como objeto, e o QuickType para geração do Model e Parse do json. Logo após foi feito um fetch dessa lista dentro do controlador e de lá ele passou a gerenciar todos os argumentos, inclusive os que foram passados para a tela de Detalhes.
+
+## Layout da aplicação
+O layout foi pensado na palheta de cores da Marvel, apresentando um design simples e de fácil visualização, associando que o usuário já esteja logado no sistema e ele queira apenas visualizar os filmes da Marvel.
+
+## Considerações finais
+Por fim, agradeço pelo teste, foi muito bom para relembrar diversos conceitos e dar uma reforçada em alguns pontos. Espero que gostem!
